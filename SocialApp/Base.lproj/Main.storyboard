@@ -74,20 +74,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGc-e7-t6d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGc-e7-t6d">
                                 <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.32844966650009155" green="0.39043784141540527" blue="0.67076843976974487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="eJa-h4-uSa"/>
                                     <constraint firstAttribute="height" constant="150" id="vet-HV-oh3"/>
                                 </constraints>
+                                <state key="normal" image="f"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-VX-kTA">
+                                <rect key="frame" x="46" y="439" width="283" height="108"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="adp-qe-1T8">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYE-Ai-jCM">
+                                        <rect key="frame" x="0.0" y="39" width="283" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voc-iK-p2Z">
+                                        <rect key="frame" x="0.0" y="78" width="283" height="30"/>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.17254901960784313" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GgT-bm-gUB" firstAttribute="top" secondItem="ZY2-dq-n0x" secondAttribute="bottom" constant="8" id="8HD-0Z-gJ1"/>
                             <constraint firstItem="GgT-bm-gUB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8cz-Y6-epe"/>
                             <constraint firstItem="OGc-e7-t6d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FEi-ce-PpI"/>
+                            <constraint firstItem="Grh-VX-kTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="FlK-Jb-W7B"/>
                             <constraint firstItem="OGc-e7-t6d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MQ5-Vw-NBD"/>
                             <constraint firstItem="ZY2-dq-n0x" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N0d-ee-kme"/>
                             <constraint firstItem="ZY2-dq-n0x" firstAttribute="leading" secondItem="415-hu-wtC" secondAttribute="leading" id="SZU-ri-y3t"/>
@@ -95,6 +121,9 @@
                             <constraint firstAttribute="trailing" secondItem="ZY2-dq-n0x" secondAttribute="trailing" id="anY-qk-gfG"/>
                             <constraint firstItem="ZY2-dq-n0x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bMj-m0-s2T"/>
                             <constraint firstItem="OGc-e7-t6d" firstAttribute="top" secondItem="GgT-bm-gUB" secondAttribute="bottom" constant="8" id="gLL-Rd-Zee"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Grh-VX-kTA" secondAttribute="trailing" constant="30" id="hgg-W1-6Es"/>
+                            <constraint firstItem="Grh-VX-kTA" firstAttribute="top" secondItem="OGc-e7-t6d" secondAttribute="bottom" constant="30" id="hsp-CE-5Pi"/>
+                            <constraint firstItem="Grh-VX-kTA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l0U-Ab-QhN"/>
                             <constraint firstItem="415-hu-wtC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="oG9-5A-ssT"/>
                             <constraint firstItem="GgT-bm-gUB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="q5G-vT-BQQ"/>
                         </constraints>
@@ -107,5 +136,6 @@
     </scenes>
     <resources>
         <image name="devslopes-logo" width="150" height="94"/>
+        <image name="f" width="352" height="328"/>
     </resources>
 </document>
