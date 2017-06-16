@@ -82,6 +82,9 @@
                                     <constraint firstAttribute="height" constant="150" id="vet-HV-oh3"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnTappedWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OeF-Sv-J1M"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-VX-kTA">
                                 <rect key="frame" x="50" y="446" width="314" height="108"/>
@@ -128,6 +131,10 @@
                             <constraint firstItem="GgT-bm-gUB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="q5G-vT-BQQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="adp-qe-1T8" id="B4y-4u-qaw"/>
+                        <outlet property="passwordField" destination="PYE-Ai-jCM" id="oqa-ek-PR6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
