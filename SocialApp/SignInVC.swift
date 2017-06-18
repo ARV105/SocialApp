@@ -63,36 +63,38 @@ class SignInVC: UIViewController {
     
 }
         
-//    @IBAction func signInTapped(_sender: AnyObject) {
-//        if let email = emailField.text, let password = passwordField.text {
-//            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-//                if error == nil{
-//                    print("MESSAGE: Email user authenticate with Firebase using email")
-//                if let user = user {
-//                    let userData = ["provider": user.providerID]
-//                    self.completeSignIn(id: user.uid, userData: userData)
-//                    }
-//                } else {
-//            Auth.auth().signIn.createUser(withEmail: email, password: password, completion: { (user, error) in
-//                if error != nil {
-//                    print("MESSAGE: Unable to authenticate with Firebase using email")
-//                } else {
-//                   print("MESSAGE: Successfully authenticated with firebase")
-//                    if let user = user {
-//                        let userData = ["provider": user.providerID]
-//                        self.completeSignIn(id: user.id, userData: userData)
-//                    }
-//                }
-//                
-//            })
-//        }
-//    })
-//  }
-//        
-//}
+    @IBAction func signInTapped(_sender: AnyObject) {
+        if let email = emailField.text, let password = passwordField.text {
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil{
+                    print("MESSAGE: Email user authenticate with Firebase using email")
+                if let user = user {
+                    let userData = ["provider": user.providerID]
+                    self.completeSignIn(id: user.uid, userData: userData)
+                    }
+                } else {
+            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                if error != nil {
+                    print("MESSAGE: Unable to authenticate with Firebase using email")
+                } else {
+                   print("MESSAGE: Successfully authenticated with firebase")
+                    if let user = user {
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
+                    }
+                }
+                
+            })
+        }
+    })
+  }
+        
+}
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
-        //DataSer
+        let keychainResult = KeychainWrapper.standard.string(forKey: KEY_UID)
+        print("MESSAGE: Data saved to keycahin \(String(describing: keychainResult))")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
     
     

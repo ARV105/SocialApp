@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZnF-04-po0">
-                                        <rect key="frame" x="132" y="56" width="150" height="94"/>
+                                        <rect key="frame" x="132" y="56.666666666666657" width="150" height="94"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.72156862745098038" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,13 +93,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYE-Ai-jCM" customClass="FancyField" customModule="SocialApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="39" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voc-iK-p2Z" customClass="FancyBtn" customModule="SocialApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="78" width="314" height="30"/>
@@ -107,6 +107,10 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTappedWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZC-2y-yRW"/>
+                                            <segue destination="GQe-XA-4cu" kind="show" identifier="goToFeed" id="PKI-3P-nrv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -140,9 +144,55 @@
             </objects>
             <point key="canvasLocation" x="-181.15942028985509" y="132.88043478260872"/>
         </scene>
+        <!--Feed-->
+        <scene sceneID="WLi-iM-o00">
+            <objects>
+                <viewController id="QqU-PZ-5eS" customClass="FeedVC" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pdI-fM-gj6"/>
+                        <viewControllerLayoutGuide type="bottom" id="GcF-ts-7Os"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wtl-2Z-gJa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Feed" id="QK9-TR-QP3">
+                        <barButtonItem key="leftBarButtonItem" image="rsz_sign-out" style="done" id="ZQb-7l-tJ1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="signOutTapped:" destination="QqU-PZ-5eS" id="ulC-6w-zXo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRD-Ti-DAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586.9565217391305" y="132.88043478260872"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i2D-yr-bQH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GQe-XA-4cu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QDL-P8-mjW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <rect key="contentStretch" x="0.59999999999999998" y="0.29999999999999999" width="1" height="1"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QqU-PZ-5eS" kind="relationship" relationship="rootViewController" id="L6p-2D-w21"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkb-TB-9wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.71014492753625" y="132.88043478260872"/>
+        </scene>
     </scenes>
     <resources>
         <image name="devslopes-logo" width="150" height="94"/>
         <image name="f" width="352" height="328"/>
+        <image name="rsz_sign-out" width="46" height="33"/>
     </resources>
 </document>
