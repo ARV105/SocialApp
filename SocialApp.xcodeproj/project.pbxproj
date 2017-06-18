@@ -13,6 +13,7 @@
 		942F637D1EF35F51001027E7 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F637C1EF35F51001027E7 /* RoundBtn.swift */; };
 		942F637F1EF373F2001027E7 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F637E1EF373F2001027E7 /* FancyField.swift */; };
 		942F63811EF3750A001027E7 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F63801EF3750A001027E7 /* FancyBtn.swift */; };
+		944FF1581EF5DF6900B96EEF /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944FF1571EF5DF6900B96EEF /* FeedVC.swift */; };
 		94C780C21EF24C9800F3D1DA /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C780C11EF24C9800F3D1DA /* FancyView.swift */; };
 		94C780C51EF24D4500F3D1DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C780C41EF24D4500F3D1DA /* Constants.swift */; };
 		94FE842D1EEF434B007DC2F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE842C1EEF434B007DC2F9 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		942F637C1EF35F51001027E7 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		942F637E1EF373F2001027E7 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		942F63801EF3750A001027E7 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		944FF1571EF5DF6900B96EEF /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		9460C6891EF49BEC00E91145 /* SocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialApp.entitlements; sourceTree = "<group>"; };
 		94C780C11EF24C9800F3D1DA /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		94C780C41EF24D4500F3D1DA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				94FE842E1EEF434B007DC2F9 /* SignInVC.swift */,
+				944FF1571EF5DF6900B96EEF /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				942F637F1EF373F2001027E7 /* FancyField.swift in Sources */,
+				944FF1581EF5DF6900B96EEF /* FeedVC.swift in Sources */,
 				94FE842F1EEF434B007DC2F9 /* SignInVC.swift in Sources */,
 				942F637D1EF35F51001027E7 /* RoundBtn.swift in Sources */,
 				94FE842D1EEF434B007DC2F9 /* AppDelegate.swift in Sources */,
@@ -667,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44F084BED1EDB7F79F2120A4 /* Pods-SocialApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = 8N7923E3UN;
@@ -682,6 +687,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E83762088018FD4D4069F7E4 /* Pods-SocialApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = 8N7923E3UN;
