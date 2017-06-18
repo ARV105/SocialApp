@@ -50,6 +50,7 @@
 		942F637C1EF35F51001027E7 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		942F637E1EF373F2001027E7 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		942F63801EF3750A001027E7 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		9460C6891EF49BEC00E91145 /* SocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialApp.entitlements; sourceTree = "<group>"; };
 		94C780C11EF24C9800F3D1DA /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		94C780C41EF24D4500F3D1DA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		94FE84291EEF434B007DC2F9 /* SocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +165,7 @@
 		94FE842B1EEF434B007DC2F9 /* SocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				9460C6891EF49BEC00E91145 /* SocialApp.entitlements */,
 				94FE842C1EEF434B007DC2F9 /* AppDelegate.swift */,
 				94FE84301EEF434B007DC2F9 /* Main.storyboard */,
 				94FE84331EEF434B007DC2F9 /* Assets.xcassets */,
@@ -294,6 +296,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 8N7923E3UN;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					94FE843C1EEF434B007DC2F9 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -661,6 +668,7 @@
 			baseConfigurationReference = 44F084BED1EDB7F79F2120A4 /* Pods-SocialApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = 8N7923E3UN;
 				INFOPLIST_FILE = SocialApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,6 +683,7 @@
 			baseConfigurationReference = E83762088018FD4D4069F7E4 /* Pods-SocialApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = 8N7923E3UN;
 				INFOPLIST_FILE = SocialApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
